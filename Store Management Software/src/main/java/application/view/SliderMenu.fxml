@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="392.0" prefWidth="200.0" styleClass="menuContainer" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SliderMenuController">
+   <content>
+      <VBox fx:id="menu" prefHeight="273.0" prefWidth="250.0" style="-fx-background-color: white;" styleClass="menuSections">
+         <children>
+            <AnchorPane fx:id="dashboard" styleClass="menuButtonSection">
+               <children>
+                  <JFXButton fx:id="buttonDashboard" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="20.0" onMouseClicked="#dashboardAction" prefHeight="39.0" prefWidth="250.0" styleClass="menuButton" text="Dashboard" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="HOME" size="1.5em" textAlignment="CENTER" wrappingWidth="25.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="prodotti" styleClass="menuButtonSection">
+               <children>
+                  <JFXButton fx:id="buttonProdotti" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="20.0" onMouseClicked="#prodottiAction" prefHeight="50.0" prefWidth="250.0" styleClass="menuButton" text="Prodotti" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="DROPBOX" size="1.3em" textAlignment="CENTER" wrappingWidth="25.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="carrello" layoutX="10.0" layoutY="322.0" styleClass="menuButtonSection">
+               <children>
+                  <JFXButton fx:id="buttonCarrello" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="20.0" onMouseClicked="#carrelloAction" prefHeight="50.0" prefWidth="250.0" styleClass="menuButton" text="Carrello" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SHOPPING_CART" size="1.3em" textAlignment="CENTER" wrappingWidth="25.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="magazzino" styleClass="menuButtonSection">
+               <children>
+                  <JFXButton fx:id="buttonMagazzino" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="20.0" onMouseClicked="#magazzinoAction" prefHeight="50.0" prefWidth="250.0" styleClass="menuButton" text="Magazzino" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="CUBES" size="1.3em" textAlignment="CENTER" wrappingWidth="25.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="categorie" styleClass="menuButtonSection">
+               <children>
+                  <JFXButton fx:id="buttonCategorie" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="20.0" onMouseClicked="#categorieAction" prefHeight="50.0" prefWidth="250.0" styleClass="menuButton" text="Categorie" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="TH_LARGE" size="1.3em" text="" textAlignment="CENTER" wrappingWidth="25.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ordini" styleClass="menuButtonSection">
+               <children>
+                  <JFXButton fx:id="buttonOrdini" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="20.0" onMouseClicked="#ordiniAction" prefHeight="50.0" prefWidth="250.0" styleClass="menuButton" text="Ordini" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="FILE_TEXT" size="1.3em" textAlignment="CENTER" wrappingWidth="25.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="statistiche" styleClass="menuButtonSection">
+               <children>
+                  <JFXButton fx:id="buttonStatistiche" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="20.0" onMouseClicked="#statisticheAction" prefHeight="50.0" prefWidth="250.0" styleClass="menuButton" text="Statistiche" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="PIE_CHART" size="1.3em" textAlignment="CENTER" wrappingWidth="25.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="utenti" styleClass="menuButtonSection">
+               <children>
+                  <JFXButton fx:id="buttonUtenti" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="20.0" onMouseClicked="#utentiAction" prefHeight="50.0" prefWidth="250.0" styleClass="menuButton" text="Utenti" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="USERS" size="1.3em" textAlignment="CENTER" wrappingWidth="25.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="impostazioni" styleClass="menuButtonSection">
+               <children>
+                  <JFXButton fx:id="buttonImpostazioni" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="20.0" onMouseClicked="#impostazioniAction" prefHeight="50.0" prefWidth="250.0" styleClass="menuButton" text="Impostazioni" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="GEAR" size="1.3em" textAlignment="CENTER" wrappingWidth="25.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="logout" styleClass="menuButtonSection">
+               <children>
+                  <JFXButton fx:id="buttonLogout" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="20.0" onMouseClicked="#logoutAction" prefHeight="50.0" prefWidth="250.0" styleClass="menuButton" text="Logout" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SIGN_OUT" size="1.3em" textAlignment="CENTER" wrappingWidth="25.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ChangeStoreSettingsController">
+   <children>
+      <BorderPane maxHeight="50.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <BorderPane maxHeight="50.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Text fx:id="titolo" strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFICA CONFIGURAZIONE NEGOZIO" textAlignment="CENTER" wrappingWidth="500.0" BorderPane.alignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Text>
+               </center>
+            </BorderPane>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" spacing="30.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1000000.0" spacing="30.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="1.0E7" spacing="30.0">
+                           <children>
+                              <JFXTextField fx:id="storeName" focusColor="#2ab56f" labelFloat="true" prefHeight="25.0" promptText="Titolo Negozio">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="separator" focusColor="#2ab56f" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="25.0" promptText="Separatore Titolo">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="mailboxServer" focusColor="#2ab56f" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="25.0" promptText="Server Posta">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="portNumber" focusColor="#2ab56f" labelFloat="true" layoutX="10.0" layoutY="132.0" prefHeight="25.0" promptText="Numero Porta">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="mailboxEmail" focusColor="#2ab56f" labelFloat="true" layoutX="10.0" layoutY="132.0" prefHeight="25.0" promptText="Email Posta">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <AnchorPane layoutX="10.0" layoutY="10.0">
+                                 <children>
+                                    <JFXPasswordField fx:id="mailboxPassword" focusColor="#2ab56f" labelFloat="true" prefHeight="31.0" promptText="Password Posta" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXPasswordField>
+                                    <JFXTextField fx:id="mailboxPasswordText" focusColor="#2ab56f" labelFloat="true" prefHeight="25.0" promptText="Password Posta" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label layoutX="382.0" layoutY="180.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="0.0">
+                                       <tooltip>
+                                          <Tooltip fx:id="toolTipPassword" />
+                                       </tooltip>
+                                       <graphic>
+                                          <FontAwesomeIcon glyphName="QUESTION_CIRCLE" size="1.3em" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXCheckBox fx:id="showPassword" onMouseClicked="#showPasswordAction" text="Mostra Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXCheckBox>
+               </children>
+               <padding>
+                  <Insets left="80.0" right="80.0" top="50.0" />
+               </padding>
+            </VBox>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="57.0" prefWidth="370.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="save" buttonType="RAISED" contentDisplay="CENTER" layoutX="-4.0" onAction="#salvaAction" prefHeight="57.0" prefWidth="346.0" ripplerFill="RED" style="-fx-background-color: #bebec2;" text="Aggiorna Configurazione" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

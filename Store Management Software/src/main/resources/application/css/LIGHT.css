@@ -1,0 +1,176 @@
+
+* {
+   -fx-mainColor: #0082c3;
+   -fx-secondoryColor: #4d4d4d;
+   -fx-neutralColor: #bebec2;
+   -fx-mainTextColor: #000000;
+   -fx-higlightColor: #58beee;
+   -fx-errorColor: #ff0000;
+   -fx-rippleColor: #ff0000;
+   -fx-buttonTextColor: #ffffff;
+   -fx-menuButtonTextColor: #000000;
+   -fx-menuIconColor: #000000;
+   -fx-menuBGColor: #ffffff;
+   -fx-menuTopBarColor: #f7f7f7;
+   }
+
+
+/*#1 BEGIN input field*/
+.jfx-text-field
+{
+    -jfx-focus-color: -fx-mainColor !important;
+    -fx-prompt-text-fill: -fx-secondoryColor !important;
+    -fx-text-fill: -fx-mainTextColor; 
+    -fx-highlight-fill: -fx-higlightColor !important; 
+}
+
+.jfx-combo-box
+{
+    -jfx-focus-color: -fx-mainColor !important;
+    -fx-prompt-text-fill: -fx-secondoryColor !important;
+    -fx-text-fill: -fx-mainTextColor; 
+    -fx-highlight-fill: -fx-higlightColor !important; 
+}
+
+.jfx-password-field{
+	-jfx-focus-color: -fx-mainColor !important;
+	-jfx-unfocus-color: -fx-neutralColor !important;
+}
+
+
+.jfx-text-field .input-line
+{
+    -fx-background-color: -fx-neutralColor !important; 
+    -fx-prompt-text-fill: -fx-secondoryColor !important;
+}
+
+
+ .jfx-text-input:error {
+    -fx-text-fill: -fx-errorColor !important;
+}
+
+ .jfx-text-field .input-line:error
+{
+    -fx-background-color: -fx-errorColor !important; 
+}
+
+.jfx-text-field:error
+{
+    -jfx-focus-color: -fx-errorColor !important;
+	-jfx-unfocus-color: -fx-errorColor !important;
+}
+
+.jfx-password-field .input-line:error
+{
+    -fx-background-color: -fx-errorColor !important; 
+}
+
+.jfx-password-field:error
+{
+    -jfx-focus-color: -fx-errorColor !important;
+	-jfx-unfocus-color: -fx-errorColor !important;
+}
+/*#1 END input field*/
+
+.jfx-check-box:determinate{
+	-jfx-unchecked-color: LIGHTGRAY !important;
+	-jfx-checked-color:  -fx-mainColor !important;
+}
+
+/*#2 BEGIN default Buttons*/
+
+.jfx-button{
+	-fx-background-color:  -fx-mainColor !important;
+}
+
+.jfx-button .jfx-rippler{
+	-jfx-rippler-fill: -fx-rippleColor;
+}
+
+-jfx-button .text{
+	-fx-fill: -fx-buttonTextColor !important;
+}
+/*#2 END default Buttons*/
+
+/*#3 BEGIN all containers where an image can be uploaded*/
+.addImage:hover{
+-fx-opacity: 0.8 !important;
+-fx-cursor: hand;
+-fx-effect: dropshadow(gaussian,lightblue,10,0.5,0,0);
+}
+/*#3 END all containers where an image can be uploaded*/
+
+/*#4 BEGIN Slider Menu */
+
+
+.menuContainer *{
+	-fx-background-color: -fx-menuBGColor !important;
+}
+
+
+.menuContainer {
+	-fx-box-border-color: -fx-menuBGColor !important;
+}
+
+.menuButtonSection{
+	-fx-background-color: -fx-menuBGColor !important;
+}
+
+.menuSections{
+	-fx-background-color: -fx-menuBGColor !important;
+}
+
+.menuButton:hover{
+	-fx-background-color: -fx-mainColor !important;
+	-fx-fill: -fx-mainColor !important;
+	-fx-opacity: 0.5 !important;
+	-fx-effect: dropshadow(gaussian,lightblue,10,0.5,0,0);
+}
+
+.menuButton .jfx-rippler{
+	-jfx-rippler-fill: -fx-mainColor !important;
+}
+
+.menuButton .text{
+	-fx-fill: -fx-mainTextColor !important;
+}
+
+.menuButton{
+	-fx-background-radius: 0px !important;
+	-fx-text-fill: -fx-menuButtonTextColor;
+	-fx-background-color: -fx-menuBGColor !important;
+}
+
+
+.menuSections .glyph-icon{
+	-fx-fill: -fx-menuIconColor;
+}
+/*#4 END Slider Menu */
+
+
+/*#5 BEGIN Cart */
+
+.continuaAcquisti{
+	-fx-fill: -fx-mainColor !important;
+}
+
+.continuaAcquisti .glyph-icon{
+	-fx-fill: -fx-mainColor !important;
+}
+/*#5 END Cart */
+
+/* #6 BEGIN top bar*/
+.topBar {
+	-fx-background-color: -fx-menuTopBarColor !important;
+	-fx-effect: dropshadow(gaussian,lightblue,10,0.5,0,0);
+}
+/*#6 END top bar */
+
+.blankContainer{
+	-fx-background-color: -fx-menuBGColor !important;
+}
+
+/*#7 LABELS or TEXT */
+
+
+

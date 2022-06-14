@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LoginRegisterController">
+   <children>
+      <AnchorPane fx:id="registerPane" layoutX="510.0" layoutY="10.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="171.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRAZIONE" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="registerNome" focusColor="#2ab56f" labelFloat="true" layoutX="106.0" layoutY="150.0" onKeyPressed="#registerChangeFocus" prefHeight="31.0" prefWidth="137.0" promptText="Nome">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="registerCognome" focusColor="#2ab56f" labelFloat="true" layoutX="247.0" layoutY="150.0" onKeyPressed="#registerChangeFocus" prefHeight="31.0" prefWidth="137.0" promptText="Cognome">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="registerEmail" focusColor="#2ab56f" labelFloat="true" layoutX="106.0" layoutY="220.0" onKeyPressed="#registerChangeFocus" prefHeight="25.0" prefWidth="279.0" promptText="Email">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="registerPasswordTextField" labelFloat="true" layoutX="106.0" layoutY="290.0" prefHeight="25.0" prefWidth="279.0" promptText="Password" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="registerPassword" focusColor="#2ab56f" labelFloat="true" layoutX="106.0" layoutY="290.0" prefHeight="25.0" prefWidth="279.0" promptText="Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <Label layoutX="371.0" layoutY="303.0">
+               <tooltip>
+                  <Tooltip fx:id="registerToolTipPassword" />
+               </tooltip>
+               <graphic>
+                  <FontAwesomeIcon glyphName="QUESTION_CIRCLE" size="1.3em" />
+               </graphic>
+            </Label>
+            <JFXCheckBox fx:id="registerShowPassword" layoutX="106.0" layoutY="355.0" onMouseClicked="#registerShowPass" text="Mostra Password" />
+            <JFXButton fx:id="registerButton" buttonType="RAISED" contentDisplay="CENTER" layoutX="106.0" layoutY="393.0" onAction="#registerAction" prefHeight="57.0" prefWidth="279.0" ripplerFill="RED" style="-fx-background-color: #bebec2;" text="Registrati" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <Hyperlink fx:id="loginLink" alignment="CENTER" layoutX="107.0" layoutY="498.0" onMouseClicked="#loginScene" prefHeight="23.0" prefWidth="279.0" text="Hai già un account? Accedi Subito!" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loginPane" layoutX="500.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="211.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Text>
+            <JFXTextField fx:id="loginEmail" focusColor="#42a472" labelFloat="true" layoutX="111.0" layoutY="220.0" onKeyPressed="#loginChangeFocus" prefHeight="25.0" prefWidth="279.0" promptText="Email">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="loginPasswordTextField" labelFloat="true" layoutX="111.0" layoutY="290.0" prefHeight="25.0" prefWidth="279.0" promptText="Password" style="-jfx-focus-color: #2ab56f; -jfx-unfocus-color: #bebec2;" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="loginPassword" focusColor="#2ab56f" labelFloat="true" layoutX="111.0" layoutY="290.0" prefHeight="25.0" prefWidth="279.0" promptText="Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXCheckBox fx:id="loginShowPassword" layoutX="111.0" layoutY="355.0" onMouseClicked="#loginShowPass" text="Mostra Password" />
+            <JFXButton fx:id="loginButton" buttonType="RAISED" contentDisplay="CENTER" layoutX="111.0" layoutY="393.0" onAction="#loginAction" prefHeight="57.0" prefWidth="279.0" ripplerFill="RED" style="-fx-background-color: #bebec2;" text="Login" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <Hyperlink fx:id="registerLink" alignment="CENTER" focusTraversable="false" layoutX="112.0" layoutY="498.0" onMouseClicked="#registerScene" prefHeight="23.0" prefWidth="279.0" text="Non hai un account? Registrati Subito!" textAlignment="CENTER" />
+            <Hyperlink fx:id="forgotPasswordLink" alignment="CENTER" focusTraversable="false" layoutX="252.0" layoutY="353.0" onMouseClicked="#forgotPassword" prefHeight="23.0" prefWidth="137.0" text="Password dimenticata?" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sliderPane" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="image" fitHeight="600.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

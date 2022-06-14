@@ -1,0 +1,296 @@
+
+* {
+   -fx-mainColor: #ffffff;
+   -fx-secondoryColor: #ffffff;
+   -fx-neutralColor: #bebec2;
+   -fx-mainTextColor: #ffffff;
+   -fx-higlightColor: #58beee;
+   -fx-errorColor: #ff0000;
+   -fx-rippleColor: #ff0000;
+   -fx-buttonTextColor: lightgrey;
+   -fx-menuButtonTextColor: lightgrey;
+   -fx-menuIconColor: lightgrey;
+   -fx-menuBGColor: #000000;
+   -fx-secondoryBGColor: #5d5d5d;
+   -fx-menuTopBarColor: #3d3d3d;
+   -fx-textDarkColor: lightgray;
+   -fx-mainDarkBGColor: #3C3C3C;
+   -fx-lightBGColor: #0082c3;
+   }
+
+AnchorPane {
+	-fx-background-color: -fx-mainDarkBGColor !important;
+}
+
+#impostazioniVBox {
+	-fx-background-color: -fx-mainDarkBGColor !important;
+}
+
+#prezzoProdotto *{
+	 -fx-text-fill: -fx-mainDarkBGColor !important;
+	 -fx-fill: -fx-mainDarkBGColor !important;
+}
+
+.label .glyph-icon{
+	-fx-fill: -fx-textDarkColor !important;
+}
+
+#toggleTema .text{
+	-fx-fill: -fx-textDarkColor !important;
+}
+
+#dashboardVBox {
+	-fx-background-color: -fx-mainDarkBGColor !important;
+}
+
+#impostazioniVBox VBox{
+	-fx-background-color: -fx-secondoryBGColor !important;
+}
+
+.scroll-pane {
+	-fx-background-color: -fx-mainDarkBGColor !important;
+}
+
+.jfx-button{
+	-fx-background-color:  -fx-lightBGColor !important;
+}
+
+.jfx-button .jfx-rippler{
+	-jfx-rippler-fill: -fx-rippleColor;
+}
+
+-jfx-button .text{
+	-fx-fill: -fx-buttonTextColor !important;
+}
+.jfx-check-box:determinate{
+	-jfx-unchecked-color: -fx-buttonTextColor !important;
+	-jfx-checked-color:  -fx-lightBGColor !important;
+}
+
+/*#1 BEGIN input field*/
+.jfx-text-field, .jfx-text-area
+{
+    -jfx-focus-color: -fx-mainColor !important;
+    -fx-prompt-text-fill: -fx-secondoryColor !important;
+    -fx-text-fill: -fx-mainTextColor !important; 
+    -fx-highlight-fill: -fx-higlightColor !important; 
+}
+
+.jfx-combo-box
+{
+    -jfx-focus-color: -fx-mainColor !important;
+    -fx-prompt-text-fill: -fx-secondoryColor !important;
+    -fx-text-fill: -fx-mainTextColor; 
+    -fx-highlight-fill: -fx-higlightColor !important; 
+}
+
+.jfx-password-field{
+	-jfx-focus-color: -fx-mainColor !important;
+	-jfx-unfocus-color: -fx-neutralColor !important;
+}
+
+
+.jfx-text-field .input-line
+{
+    -fx-background-color: -fx-neutralColor !important; 
+    -fx-prompt-text-fill: -fx-secondoryColor !important;
+}
+
+
+ .jfx-text-input:error {
+    -fx-text-fill: -fx-errorColor !important;
+}
+
+ .jfx-text-field .input-line:error
+{
+    -fx-background-color: -fx-errorColor !important; 
+}
+
+.jfx-text-field:error
+{
+     -jfx-focus-color: -fx-errorColor !important;
+	-jfx-unfocus-color: -fx-errorColor !important;
+}
+
+.jfx-password-field .input-line:error
+{
+    -fx-background-color: -fx-errorColor !important; 
+}
+
+.jfx-password-field:error
+{
+    -jfx-focus-color: -fx-errorColor !important;
+	-jfx-unfocus-color: -fx-errorColor !important;
+}
+
+
+/*#3 BEGIN all containers where an image can be uploaded*/
+.addImage:hover{
+-fx-opacity: 0.8 !important;
+-fx-cursor: hand;
+-fx-effect: dropshadow(gaussian,lightblue,10,0.5,0,0);
+}
+/*#3 END all containers where an image can be uploaded*/
+
+/*#4 BEGIN Slider Menu */
+
+.jfx-hamburger StackPane {
+	-fx-background-color: -fx-textDarkColor !important;
+}
+
+.menuContainer *{
+	-fx-background-color: -fx-menuBGColor !important;
+}
+
+
+.menuContainer {
+	-fx-box-border-color: -fx-menuBGColor !important;
+}
+
+.menuButtonSection{
+	-fx-background-color: -fx-menuBGColor !important;
+}
+
+.menuSections{
+	-fx-background-color: -fx-menuBGColor !important;
+}
+
+.menuButton:hover{
+	-fx-background-color: -fx-mainColor !important;
+	-fx-fill: -fx-mainColor !important;
+	-fx-opacity: 0.5 !important;
+	-fx-effect: dropshadow(gaussian,lightblue,10,0.5,0,0);
+}
+
+.menuButton .jfx-rippler{
+	-jfx-rippler-fill: -fx-mainColor !important;
+}
+
+.menuButton{
+	-fx-background-radius: 0px !important;
+	-fx-text-fill: -fx-menuButtonTextColor;
+	-fx-background-color: -fx-menuBGColor !important;
+}
+
+
+.menuSections .glyph-icon{
+	-fx-fill: -fx-menuIconColor;
+}
+/*#4 END Slider Menu */
+
+/*#5 BEGIN Cart */
+
+.continuaAcquisti{
+	-fx-fill: -fx-mainColor !important;
+}
+
+.continuaAcquisti .glyph-icon{
+	-fx-fill: -fx-mainColor !important;
+}
+/*#5 END Cart */
+
+/* #6 BEGIN top bar*/
+.topBar {
+	-fx-background-color: -fx-menuTopBarColor !important;
+	-fx-effect: dropshadow(gaussian,lightblue,10,0.5,0,0);
+}
+/*#6 END top bar */
+
+.blankContainer{
+	-fx-background-color: -fx-mainBGColor !important;
+}
+
+#background{
+	-fx-background-color: -fx-secondoryBGColor !important;
+}
+
+/*#7 BEGIN DASHBOARD */
+#dashboardContainer BorderPane *{
+	-fx-background-color: -fx-secondoryBGColor !important;
+	-fx-border-color: -fx-mainDarkColor !important;
+}
+
+Text{
+	-fx-fill: -fx-textDarkColor !important;
+}
+
+#dashboardContainer #venditeIcon{
+	-fx-fill: -fx-textDarkColor !important;
+}
+
+
+/*#7 END DASHBAORD */
+
+
+/*JOIN */
+
+.root { 
+    -fx-accent: #1e74c6;
+    -fx-focus-color: -fx-accent;
+    -fx-base: #373e43;
+    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-control-inner-background-alt: -fx-control-inner-background ;
+}
+
+.label{
+    -fx-text-fill: -fx-textDarkColor !important;
+}
+
+.text-field {
+    -fx-prompt-text-fill: gray;
+}
+
+.titulo{
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.button{
+    -fx-focus-traversable: false;
+}
+
+.button:hover{
+    -fx-text-fill: white;
+}
+
+.separator *.line { 
+    -fx-background-color: #3C3C3C;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+
+.scroll-bar{
+    -fx-background-color: derive(-fx-base,45%)
+}
+
+.button:default {
+    -fx-base: -fx-accent ;
+} 
+
+.table-view{
+    /*-fx-background-color: derive(-fx-base, 10%);*/
+    -fx-selection-bar-non-focused: derive(-fx-base, 50%);
+}
+
+.table-view .column-header .label{
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-weight: none;
+}
+
+.list-cell:even,
+.list-cell:odd,
+.table-row-cell:even,
+.table-row-cell:odd{    
+    -fx-control-inner-background: derive(-fx-base, 15%);
+}
+
+.list-cell:empty,
+.table-row-cell:empty {
+    -fx-background-color: transparent;
+}
+
+.list-cell,
+.table-row-cell{
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color:transparent;
+}

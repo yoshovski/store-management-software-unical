@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ImpostazioniController">
+   <children>
+      <ScrollPane fx:id="container" fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox id="impostazioniVBox" fx:id="sezioni" minWidth="350.0" prefHeight="416.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: lightgrey;">
+               <children>
+                  <VBox fx:id="preferenzeApp" layoutX="40.0" layoutY="501.0" minWidth="360.0" prefHeight="200.0" spacing="30.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PREFERENZE APP">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <GridPane vgap="30.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="200.0" prefWidth="200.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="274.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="TEMA" textFill="#00000099" />
+                                    <JFXToggleButton id="toggleTema" fx:id="toggleTema" prefWidth="95.0" text="Dark" textFill="#00000099" toggleColor="#6f6f6f" toggleLineColor="#b9b9b9" unToggleColor="#fcff3a" unToggleLineColor="#edf894" GridPane.columnIndex="1">
+                                       <graphic>
+                                          <FontAwesomeIcon lineSpacing="10.0" />
+                                       </graphic>
+                                    </JFXToggleButton>
+                                    <Label layoutX="10.0" layoutY="7.0" text="RILEVAMENTO AUTOMATICO" textFill="#00000099" GridPane.rowIndex="1" />
+                                    <JFXCheckBox fx:id="temaAutomatico" onMouseClicked="#disableToggle" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="12.0" />
+                                       </GridPane.margin>
+                                    </JFXCheckBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="salvaPreferenzeButton" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="20.0" onMouseClicked="#salvaPreferenzeAction" style="-fx-background-color: #0082c3;" text="SALVA LE TUE PREFERENZE" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="CHEVRON_RIGHT" />
+                           </graphic>
+                           <padding>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="40.0" layoutY="40.0" minWidth="360.0" prefHeight="200.0" spacing="30.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="INFORMAZIONI PERSONALI">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <GridPane vgap="10.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="100.0" prefWidth="140.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="327.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="NOME" textFill="#0000009a" />
+                                    <Label fx:id="nome" text="Ciccio" textFill="#0082c3" GridPane.columnIndex="1" />
+                                    <Label text="COGNOME" textFill="#0000009a" GridPane.rowIndex="1" />
+                                    <Label fx:id="cognome" layoutX="157.0" layoutY="7.0" text="Pasticcio" textFill="#0082c3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="EMAIL" textFill="#0000009a" GridPane.rowIndex="2" />
+                                    <Label fx:id="emailUtente" layoutX="157.0" layoutY="27.0" text="email@email.com" textFill="#0082c3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="TELEFONO" textFill="#0000009a" GridPane.rowIndex="3" />
+                                    <Label fx:id="telefono" layoutX="157.0" layoutY="47.0" text="+123456" textFill="#0082c3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="modificaInfoPersonaliButton" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="20.0" onMouseClicked="#modificaInfoPersonaliAction" style="-fx-background-color: #0082c3;" text="MODIFICA INFORMAZIONI PERSONALI" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="CHEVRON_RIGHT" />
+                           </graphic>
+                           <padding>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </VBox>
+                  <VBox minWidth="360.0" prefHeight="200.0" spacing="30.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="100.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="327.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="PASSWORD" textFill="#0000009a" />
+                              <Label text="********" textFill="#0082c3" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <JFXButton fx:id="modificaPasswordButton" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="20.0" onMouseClicked="#modificaPasswordAction" style="-fx-background-color: #0082c3;" text="MODIFICA PASSWORD" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="CHEVRON_RIGHT" />
+                           </graphic>
+                           <padding>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="schedaConfig" layoutX="40.0" layoutY="238.0" minWidth="360.0" prefHeight="200.0" spacing="30.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CONFIGURAZIONI NEGOZIO">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <GridPane vgap="10.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="150.0" prefWidth="140.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="327.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="27.0" text="TITOLO NEGOZIO" textFill="#0000009a" />
+                                    <Label fx:id="titoloNegozio" layoutX="157.0" layoutY="27.0" text="E-Commerce" textFill="#0082c3" GridPane.columnIndex="1" />
+                                    <Label text="SEPARATOR NEGOZIO" textFill="#0000009a" GridPane.rowIndex="1" />
+                                    <Label fx:id="separatorNegozio" text="-" textFill="#0082c3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="SERVER POSTA" textFill="#0000009a" GridPane.rowIndex="3" />
+                                    <Label fx:id="serverPosta" layoutX="157.0" layoutY="7.0" text="esempio.it" textFill="#0082c3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="NUMERO PORTA" textFill="#0000009a" GridPane.rowIndex="4" />
+                                    <Label fx:id="numeroPorta" layoutX="157.0" layoutY="27.0" text="435" textFill="#0082c3" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label text="EMAIL POSTA" textFill="#0000009a" GridPane.rowIndex="5" />
+                                    <Label fx:id="emailPosta" layoutX="157.0" layoutY="47.0" text="example@email.com" textFill="#0082c3" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label text="PASSWORD POSTA" textFill="#0000009a" GridPane.rowIndex="6" />
+                                    <Label layoutX="157.0" layoutY="87.0" text="********" textFill="#0082c3" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Separator opacity="0.5" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Separator>
+                                    <Separator layoutX="10.0" layoutY="54.0" opacity="0.5" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Separator>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="modificaConfigurazioniButton" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="20.0" onMouseClicked="#modificaConfigurazioniAction" style="-fx-background-color: #0082c3;" text="MODIFICA CONFIGURAZIONI DEL NEGOZIO" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="CHEVRON_RIGHT" />
+                           </graphic>
+                           <padding>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

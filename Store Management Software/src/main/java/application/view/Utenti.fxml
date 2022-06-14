@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.UtentiController">
+   <children>
+      <TableView fx:id="utentiView" layoutX="26.0" layoutY="221.0" onMouseClicked="#modificaUtente" prefHeight="156.0" prefWidth="549.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0">
+        <columns>
+            <TableColumn fx:id="avatarColumn" prefWidth="75.0" sortable="false" style="-fx-alignment: CENTER;" text="Avatar" />
+          <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="nomeColumn" prefWidth="75.0" text="Nome" />
+            <TableColumn fx:id="cognomeColumn" prefWidth="75.0" text="Cognome" />
+            <TableColumn fx:id="ultimoAccessoColumn" prefWidth="108.0" text="Ultimo Accesso" />
+            <TableColumn fx:id="ruoloColumn" prefWidth="63.0" text="Ruolo" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <BorderPane minHeight="40.0" minWidth="1.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <right>
+            <JFXButton fx:id="refresh" buttonType="RAISED" graphicTextGap="10.0" onMouseClicked="#refreshAction" prefHeight="40.0" prefWidth="40.0" ripplerFill="RED" style="-fx-background-color: #0082c3;" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="REFRESH" />
+               </graphic>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </JFXButton>
+         </right>
+         <center>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="519.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="aggiungi" buttonType="RAISED" graphicTextGap="10.0" onMouseClicked="#aggiungiUtenteWindow" prefHeight="40.0" prefWidth="184.0" ripplerFill="RED" style="-fx-background-color: #0082c3;" text="Aggiungi" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="modifica" buttonType="RAISED" graphicTextGap="10.0" layoutX="224.0" layoutY="19.0" onMouseClicked="#modificaUtente" prefHeight="40.0" prefWidth="183.0" ripplerFill="RED" style="-fx-background-color: #0082c3;" text="Modifica" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="rimuovi" buttonType="RAISED" graphicTextGap="10.0" layoutX="25.0" layoutY="19.0" onMouseClicked="#rimuoviUtente" prefHeight="40.0" prefWidth="184.0" ripplerFill="RED" style="-fx-background-color: #0082c3;" text="Rimuovi" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER_TIMES" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="15.0" />
+               </BorderPane.margin>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

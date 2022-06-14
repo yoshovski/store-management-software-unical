@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CarrelloController">
+   <children>
+      <BorderPane layoutX="15.0" layoutY="19.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <top>
+            <BorderPane minHeight="40.0" minWidth="1.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="30.0" />
+               </BorderPane.margin>
+               <left>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="529.0" spacing="10.0" BorderPane.alignment="CENTER_LEFT">
+                     <children>
+                        <Hyperlink focusTraversable="false" graphicTextGap="15.0" onMouseClicked="#continuaAcquistiAction" prefHeight="29.0" prefWidth="197.0" styleClass="continuaAcquisti" text="Continua i tuoi acquisti" underline="true" visited="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="CHEVRON_LEFT" styleClass="continuaAcquisti" />
+                           </graphic>
+                        </Hyperlink>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets right="15.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </left>
+               <right>
+                  <VBox prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Label text="TOTALE:">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="totaleOrdine" text="0.00">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="156.0" layoutY="10.0" text="€">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="procedi" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="10.0" minWidth="250.0" onMouseClicked="#procediOrdineAction" prefHeight="40.0" prefWidth="190.0" ripplerFill="RED" style="-fx-background-color: #0082c3;" text="Procedi all'Ordine" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="CHEVRON_RIGHT" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </right>
+            </BorderPane>
+         </top>
+         <center>
+            <TableView fx:id="prodottiView" prefHeight="270.0" prefWidth="540.0" BorderPane.alignment="CENTER">
+              <columns>
+                  <TableColumn fx:id="fotoColumn" prefWidth="74.0" sortable="false" text="Foto" />
+                  <TableColumn fx:id="nomeColumn" prefWidth="75.0" text="Nome" />
+                <TableColumn fx:id="descrizioneColumn" prefWidth="75.0" text="Descrizione" />
+                  <TableColumn fx:id="quantityColumn" prefWidth="108.0" text="Quantità" />
+                  <TableColumn fx:id="prezzoColumn" prefWidth="75.0" text="Prezzo Totale" />
+                  <TableColumn fx:id="rimuoviColumn" prefWidth="75.0" text="  " />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

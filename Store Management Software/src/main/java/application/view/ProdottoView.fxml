@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ProdottoViewController">
+   <children>
+      <BorderPane maxHeight="50.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <BorderPane prefHeight="50.0" BorderPane.alignment="TOP_LEFT">
+               <center>
+                  <Text fx:id="productName" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME PRODOTTO" textAlignment="CENTER" wrappingWidth="500.0" BorderPane.alignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Text>
+               </center>
+               <bottom>
+                  <Label id="prezzoProdotto" fx:id="productPrice" alignment="TOP_CENTER" graphicTextGap="3.0" prefHeight="22.0" prefWidth="108.0" style="-fx-background-color: #FFEA28; -fx-background-radius: 50;" text="122" wrapText="true" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="EURO" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeType="OUTSIDE" text="" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </bottom>
+               <BorderPane.margin>
+                  <Insets bottom="15.0" top="15.0" />
+               </BorderPane.margin>
+            </BorderPane>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="1000.0" spacing="30.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1000.0" spacing="10.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="productImage" fitHeight="150.0" fitWidth="212.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="productCategory" alignment="TOP_CENTER" focusTraversable="false" graphicTextGap="0.0" prefHeight="29.0" prefWidth="212.0" style="-fx-background-color: #5B666E;" text="Categoria" textFill="WHITE" VBox.vgrow="NEVER">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label fx:id="productDescription" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" lineSpacing="1.0" prefHeight="135.0" prefWidth="186.0" style="-fx-border-radius: 50;" wrapText="true">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <VBox>
+                                 <children>
+                                    <Label text="Quantità">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Spinner fx:id="productQuantity" editable="true" prefHeight="25.0" prefWidth="204.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="50.0" right="50.0" top="30.0" />
+               </padding>
+            </VBox>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="57.0" prefWidth="370.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="-5.0" layoutY="-1.0" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <JFXButton fx:id="close" buttonType="RAISED" contentDisplay="CENTER" onAction="#closeAction" onMouseClicked="#salvaAction" prefHeight="57.0" prefWidth="340.0" ripplerFill="#00aeff" style="-fx-background-color: #00aeff;" text="CHIUDI" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="addToCart" buttonType="RAISED" contentDisplay="CENTER" layoutX="250.0" layoutY="10.0" onMouseClicked="#salvaAction" prefHeight="57.0" prefWidth="340.0" ripplerFill="RED" style="-fx-background-color: #0082c3;" text="AGGIUNGI AL CARRELLO" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

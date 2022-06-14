@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MagazzinoViewController">
+   <children>
+      <BorderPane maxHeight="50.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <BorderPane maxHeight="50.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Text fx:id="titolo" strokeType="OUTSIDE" strokeWidth="0.0" text="AGGIUNGI NUOVO PRODOTTO" textAlignment="CENTER" wrappingWidth="500.0" BorderPane.alignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Text>
+               </center>
+            </BorderPane>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="1000.0" spacing="30.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1000.0" spacing="30.0">
+                     <children>
+                        <Rectangle fx:id="imageContainer" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="100.0" onMouseClicked="#addProductImage" stroke="#e4dddd" strokeType="INSIDE" styleClass="addImage" width="100.0">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor></Rectangle>
+                        <VBox prefHeight="200.0" prefWidth="1000.0" spacing="30.0">
+                           <children>
+                              <JFXTextField fx:id="nome" focusColor="#0082c3" labelFloat="true" prefHeight="31.0" prefWidth="1000.0" promptText="Nome">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXComboBox fx:id="categoria" focusColor="#0082c3" labelFloat="true" prefHeight="25.0" prefWidth="1000.0" promptText="Categoria" style="-fx-font-size: 15;" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXTextArea fx:id="descrizione" focusColor="#0082c3" labelFloat="true" prefHeight="100.0" prefWidth="340.0" promptText="Descrizione">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextArea>
+                  <HBox alignment="CENTER" layoutX="90.0" layoutY="40.0" maxHeight="51.0" prefHeight="51.0" prefWidth="500.0" spacing="30.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="1000.0" spacing="5.0">
+                           <children>
+                              <Label text="Quantità">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="quantity" editable="true" prefWidth="1000.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="1000.0" spacing="5.0">
+                           <children>
+                              <Label text="Prezzo">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="prezzo" editable="true" prefHeight="25.0" prefWidth="222.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="80.0" right="80.0" top="50.0" />
+               </padding>
+            </VBox>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="57.0" prefWidth="370.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="salva" buttonType="RAISED" contentDisplay="CENTER" layoutX="-4.0" onMouseClicked="#salvaAction" prefHeight="57.0" prefWidth="346.0" ripplerFill="RED" style="-fx-background-color: #0082c3;" text="SALVA" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="aggiungi" buttonType="RAISED" contentDisplay="CENTER" layoutX="16.0" onMouseClicked="#salvaAction" prefHeight="57.0" prefWidth="340.0" ripplerFill="RED" style="-fx-background-color: #0082c3;" text="AGGIUNGI" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

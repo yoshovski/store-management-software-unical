@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DashboardController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox id="dashboardVBox" spacing="10.0">
+               <children>
+                  <BorderPane prefHeight="146.0" prefWidth="538.0" style="-fx-background-color: #119abf;">
+                     <right>
+                        <ImageView fx:id="imageContainer" fitHeight="100.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="30.0" top="10.0" />
+                           </BorderPane.margin>
+                        </ImageView>
+                     </right>
+                     <center>
+                        <VBox maxHeight="100.0" prefHeight="100.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="30.0" left="30.0" top="30.0" />
+                           </BorderPane.margin>
+                           <children>
+                              <FlowPane hgap="5.0">
+                                 <children>
+                                    <Label layoutX="80.0" layoutY="10.0" text="CIAO," textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="nomeUtente" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cognomeUtente" layoutX="80.0" layoutY="10.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </FlowPane>
+                              <Label fx:id="ruoloUtente" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+                  <GridPane id="dashboardContainer" hgap="10.0" vgap="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="1000.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="1000.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="300.0" minHeight="300.0" prefHeight="300.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <BorderPane style="-fx-background-color: white;" GridPane.columnIndex="1">
+                           <center>
+                              <GridPane prefHeight="306.0" prefWidth="265.0" style="-fx-background-color: white;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="1.0" prefWidth="1.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" maxHeight="1.0" minHeight="1.0" prefHeight="1.0" vgrow="NEVER" />
+                                    <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon fill="#aa89b8" glyphName="CUBES" size="4em" />
+                                                <FlowPane alignment="CENTER" hgap="5.0">
+                                                   <children>
+                                                      <Text fill="#aaaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutti i Prodotti">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="numProdotti" text="-" textFill="#aaaaaa">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </FlowPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                    <Separator opacity="0.5" prefWidth="200.0" GridPane.rowIndex="1" />
+                                    <Separator layoutX="20.0" layoutY="162.0" opacity="0.5" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Separator opacity="0.5" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" />
+                                    <Separator layoutX="140.0" layoutY="20.0" opacity="0.5" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <BorderPane layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon fill="#aa89b8" glyphName="TH_LARGE" size="4em" />
+                                                <FlowPane alignment="CENTER" hgap="5.0">
+                                                   <children>
+                                                      <Text fill="#aaaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutte le Categorie">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="numCategorie" text="-" textFill="#aaaaaa">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </FlowPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon fill="DARKORANGE" glyphName="EXCLAMATION_CIRCLE" size="4em" />
+                                                <FlowPane alignment="CENTER" hgap="5.0">
+                                                   <children>
+                                                      <Text fill="#aaaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="In Esaurimento">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="prodottiEsaurimento" text="-" textFill="#aaaaaa">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </FlowPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane layoutX="20.0" layoutY="139.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon fill="#aa0000" glyphName="TIMES_CIRCLE" size="4em" />
+                                                <FlowPane alignment="CENTER" hgap="5.0">
+                                                   <children>
+                                                      <Text fill="#aaaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="Esauriti">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="prodottiEsauriti" text="-" textFill="#aaaaaa">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </FlowPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </GridPane>
+                           </center>
+                           <top>
+                              <BorderPane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PRODOTTI" BorderPane.alignment="BOTTOM_CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </center>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                           </top>
+                        </BorderPane>
+                        <BorderPane layoutX="314.0" layoutY="40.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <center>
+                              <GridPane prefHeight="306.0" prefWidth="265.0" style="-fx-background-color: white;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="1.0" prefWidth="1.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="224.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon fill="#7ad03a" glyphName="TRUCK" size="4em" />
+                                                <FlowPane alignment="CENTER" hgap="5.0">
+                                                   <children>
+                                                      <Text fill="#aaaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="In Lavorazione">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="ordiniLavorazione" text="-" textFill="#aaaaaa">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </FlowPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                    <Separator opacity="0.5" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" />
+                                    <BorderPane layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon fill="#aaaaaa" glyphName="MINUS_CIRCLE" size="4em" />
+                                                <FlowPane alignment="CENTER" hgap="5.0">
+                                                   <children>
+                                                      <Text fill="#aaaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="In Sospeso">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="ordiniSospeso" text="-" textFill="#aaaaaa">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </FlowPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </GridPane>
+                           </center>
+                           <top>
+                              <BorderPane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ORDINI" BorderPane.alignment="BOTTOM_CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </center>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                           </top>
+                        </BorderPane>
+                        <BorderPane layoutX="314.0" layoutY="406.0" style="-fx-background-color: white;" GridPane.rowIndex="1">
+                           <center>
+                              <GridPane prefHeight="306.0" prefWidth="265.0" style="-fx-background-color: white;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="1.0" prefWidth="1.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="224.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon fill="#7ad03a" glyphName="USER" size="4em" />
+                                                <FlowPane alignment="CENTER" hgap="5.0">
+                                                   <children>
+                                                      <Text fill="#aaaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="Online">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="utentiOnline" text="-" textFill="#aaaaaa">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </FlowPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                    <Separator opacity="0.5" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" />
+                                    <BorderPane layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon fill="#418eb5" glyphName="USERS" size="4em" />
+                                                <FlowPane alignment="CENTER" hgap="5.0">
+                                                   <children>
+                                                      <Text fill="#aaaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutti i Clienti">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="tuttiClienti" text="-" textFill="#aaaaaa">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </FlowPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </GridPane>
+                           </center>
+                           <top>
+                              <BorderPane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="UTENTI" BorderPane.alignment="BOTTOM_CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </center>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                           </top>
+                        </BorderPane>
+                        <BorderPane layoutX="314.0" layoutY="40.0" style="-fx-background-color: white;">
+                           <center>
+                              <GridPane prefHeight="306.0" prefWidth="265.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="218.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="100.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" maxHeight="1.0" minHeight="1.0" prefHeight="1.0" vgrow="NEVER" />
+                                    <RowConstraints maxHeight="150.0" minHeight="100.0" prefHeight="130.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon id="venditeIcon" fill="#464646" glyphName="SIGNAL" size="4em" />
+                                                <FlowPane alignment="CENTER" columnHalignment="CENTER">
+                                                   <children>
+                                                      <Text fill="#aaaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendite nette">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text fill="#aaaaaa" layoutX="78.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" €">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="venditeNette" text="-" textFill="#aaaaaa">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </FlowPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                    <Separator opacity="0.5" prefWidth="200.0" GridPane.rowIndex="1" />
+                                    <BorderPane layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon fill="#aa89b8" glyphName="TH_LARGE" size="4em" />
+                                                <FlowPane alignment="CENTER" hgap="5.0">
+                                                   <children>
+                                                      <Text fill="#aaaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="# Vendite Concluse">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Label fx:id="numVendite" text="-" textFill="#aaaaaa">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </FlowPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </GridPane>
+                           </center>
+                           <top>
+                              <BorderPane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VENDITE QUESTO MESE" BorderPane.alignment="BOTTOM_CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </center>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                           </top>
+                        </BorderPane>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
