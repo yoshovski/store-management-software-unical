@@ -1,3 +1,6 @@
+Created by Stefan Yoshovski and Francesco Copelli on July 2021 during studies at University of Calabria  (Italy)
+LinkedIn: https://www.linkedin.com/in/stefan-yoshovski/
+
 ### Project theme: Store Management Software
 
 ### Brief introduction: 
@@ -42,4 +45,29 @@ NB: if you want to open FXML files in SceneBuilder (8.5.0) and import the jar fi
 - Usage of External Mail Server (The data of port, server name, password can be set directly in the database through the "Settings" section in the "Store management Software". Password is securely read and saved with encryption and decryption methods using AES256)
 - Sentry (Log System for monitoring erros and performance online)
 
-### Snapshots:
+### How to configure the project locally?
+Originally the database of this project has been running on a remote server to allow multiple users to connect at the same time and have access to the same data. For safety purposes, the remote acces has been removed and in order to configure the project locally you must:
+- Use the dump of the databse which has been uploaded to this repository
+- Set the correct datasource data in the project in the following file: "application.server" package --> "DataSource.java
+- To set the external email server, run the program as an admin and go to "Settings" -> "Shop Configurations" --> (put your mail server, port number and password)
+- If you want to set your Sentry Logger, go to "application.common" package -> Logger.java -> (change the DNS)
+
+### How to run the program?
+After setting the database, you will have to run two files (because this is a client-server program) in the following order
+1) MainServer.java (you can find it in "application.server" package
+2) Main.java (you can find it in "application" package
+
+Then a Login Panel will appear. In the program, there are 2 different type of users: shop manager (admin) and customer
+**Admin Credentials**
+email: admin@gmail.com
+password: prova123
+
+**Customer Credentials**
+email: elon@gmail.com
+password: prova123
+
+### Snapshots and Demo:
+
+- Snapshots: https://github.com/yoshovski/store-management-software-unical/tree/main/Snapshots
+- Video Demo: https://youtu.be/znyXl7PKybk
+
